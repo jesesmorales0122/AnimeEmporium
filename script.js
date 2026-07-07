@@ -1,4 +1,3 @@
-// --- Modales ---
 const modalLogin = document.getElementById("loginModal");
 const modalRegistro = document.getElementById("registroModal");
 
@@ -7,17 +6,14 @@ const closeLogin = document.querySelector(".close");
 const closeRegistro = document.querySelector(".close-reg");
 const crearCuenta = document.getElementById("crearCuenta");
 
-// Abrir modal de login
 if (btnLogin && modalLogin) {
   btnLogin.onclick = () => modalLogin.style.display = "block";
 }
 
-// Cerrar modal de login
 if (closeLogin && modalLogin) {
   closeLogin.onclick = () => modalLogin.style.display = "none";
 }
 
-// Abrir modal de registro desde el link
 if (crearCuenta && modalLogin && modalRegistro) {
   crearCuenta.onclick = (e) => {
     e.preventDefault();
@@ -26,18 +22,16 @@ if (crearCuenta && modalLogin && modalRegistro) {
   };
 }
 
-// Cerrar modal de registro
 if (closeRegistro && modalRegistro) {
   closeRegistro.onclick = () => modalRegistro.style.display = "none";
 }
 
-// Cerrar modales al dar clic fuera
 window.onclick = (event) => {
   if (event.target == modalLogin) modalLogin.style.display = "none";
   if (event.target == modalRegistro) modalRegistro.style.display = "none";
 };
 
-// --- Carrito ---
+// aqui es el carritooo
 document.addEventListener("DOMContentLoaded", () => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   const listaCarrito = document.getElementById("lista-carrito");
@@ -92,11 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalItems = carrito.reduce((acc, p) => acc + p.cantidad, 0);
     contadorCarrito.textContent = totalItems;
 
-    // Disparar animación
     contadorCarrito.classList.add("animar");
     setTimeout(() => {
       contadorCarrito.classList.remove("animar");
-    }, 300); // duración igual al CSS
+    }, 300);
   }
 }
 
@@ -114,8 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   mostrarCarrito();
-
-  // Conectar botones "Agregar al carrito"
+// aqui empiezan los botoneees del carritooo
   const botonesCarrito = document.querySelectorAll(".btn-carrito");
   botonesCarrito.forEach(boton => {
     boton.addEventListener("click", () => {
