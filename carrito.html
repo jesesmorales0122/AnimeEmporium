@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Emporium - Carrito</title>
+  <link rel="stylesheet" href="estilos.css">
+  <LINK rel="icon" href="imagenes/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="imagenes/logo.jpeg" alt="Anime Emporium Logo" class="logo-img">
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="catalogo.html">Catálogo</a></li>
+    
+    <li><a href="mangas.html">Mangas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li class="carrito">
+      <a href="carrito.html">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </li>
+  </ul>
+</nav>
+ 
+ <!-- Contenido principal -->
+  <main class="ventana">
+    <h1 class="seccion-carrito">Tu carrito de compras</h1>
+    <table class="tabla-carrito">
+      <thead>
+        <tr>
+          <th>Juego</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="lista-carrito">
+        <!-- Aquí se insertan los productos con JS -->
+      </tbody>
+    </table>
+
+    <div class="total-carrito">
+      <h3>
+  <span class="texto-total">Total:</span> 
+  <span class="simbolo-pesos">$</span>
+  <span id="total">0</span>
+      </h3>
+      <button class="btn-finalizar">Finalizar compra</button>
+    </div>
+  </main>
+
+  <!-- Footer compartido -->
+  <footer class="footer">
+    <p>© ANIME EMPORIUM | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
